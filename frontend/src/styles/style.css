@@ -1,0 +1,738 @@
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+html{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+/* Styling for the navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+ul li {
+    position: relative;
+}
+[data-aos] {
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(255, 255, 255);
+}
+footer p, 
+footer span {
+  color: black !important;
+}
+
+  
+ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+    background: linear-gradient(to right, #153a6a, rgb(114, 189, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Active category */
+ul li a.active {
+    color: rgb(114, 189, 255);
+}
+
+/* Animated underline effect */
+ul li a.active::after,
+ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: rgb(114, 189, 255);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Logo Styling */
+.logo-img {
+    height: 300px;
+    width: auto;
+    display: block;
+    
+}
+
+/* Blurred Background */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    width: 45%;
+    height: 80%;
+    border-radius: 10%;
+   
+    background-size: cover;
+    background-position: center;
+   
+    z-index: -1;
+}
+
+.hero * {
+    position: relative;
+    z-index: 1;
+    
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+
+
+.btn {
+    background-color: rgb(114, 189, 255);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+
+nav ul li a:hover, nav ul li a.active {
+    color: #00aaff;
+}
+
+
+
+
+/* About section */
+.about {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #153a6a;
+}
+.free-consultation-btn {
+    background: linear-gradient(to right,#153a6a, rgb(114, 189, 255));
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.free-consultation-btn {
+    box-shadow: 0px 4px 15px rgba(114, 189, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Active (Click) Effect */
+.free-consultation-btn:active {
+    transform: scale(0.98);
+}
+  .Consultation{
+    top:0%;
+    margin-left:5%;
+  }
+  .free-consultation-btn:hover {
+    background-color:  #153a6a; /* Glow effect */
+  }
+  
+.about img {
+    height: auto;
+    width: 430px;
+}
+
+.about-text {
+    width: 550px;
+    
+}
+.about-text p{
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h2 {
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    
+}
+
+.about-text p {
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button {
+    background-color: rgb(114, 189, 255);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid rgb(114, 189, 255);
+    cursor: pointer;
+}
+
+/* Service section */
+.service {
+    background: #ffffff;
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.title h2 {
+    color: rgb(0, 0, 0);
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+   
+}
+
+.card {
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transform: translateY(30px);
+    color: #00aaff;
+    opacity: 0;
+    animation: cardAnimation 1s forwards;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Adding shadow */
+}
+
+.card:hover {
+    transform: translateY(0); /* Optional: Adds an effect when hovering */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* A deeper shadow on hover */
+}
+
+
+.card i {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: rgb(114, 189, 255);
+    transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transition */
+}
+/* Service Icon Hover Effect */
+/* Ensure the icon is centered */
+.card .service-icon {
+    font-size: 50px;
+    display: block;
+    margin: 25px auto; /* Center the icon horizontally */
+    color: #153a6a;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-align: center; /* Ensures the icon is centered */
+}
+
+.card:hover .service-icon {
+    transform: scale(1.3);  /* Increase the icon size on hover */
+    color: rgb(114, 189, 255);  /* Optional: Change color on hover */
+}
+
+
+.card h5 {
+    background: linear-gradient(to right, #153a6a, rgb(114, 189, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.card .pra {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+
+@keyframes cardAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-me p {
+   
+    color: #ffffff;
+    font-size: 35px;
+    text-align: center;
+    padding: 100px 0;
+    background-color: #153a6a;
+}
+
+footer {
+    padding: 25px 0;
+    background-color: #101010;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer .end {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 15px;
+}
+
+footer .end a {
+    text-decoration: none;
+    color: white;
+}
+h1 {
+    color: rgb(22, 13, 13);
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+
+h3 {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+h4 {
+    color: rgb(114, 189, 255);
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+span {
+    color: rgb(114, 189, 255);
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+}
+
+#typewriter-text {
+    display: inline-block;
+    white-space: nowrap;
+}
+.first {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  
+  
+  }
+  
+  .background-logo {
+    position: relative;
+   background-color: none;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    z-index: 999;
+ top:-10%;
+ flex: 0 0 35%;
+ padding: 20px;
+ 
+    /* Puts the video behind other content */
+  }
+  
+  .TypeWriter p {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-left: 1%;
+    margin-top: -40%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    width: 50%;
+    background: linear-gradient(to right, rgb(114, 189, 255), #153a6a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.TypeWriter span {
+    font-size: 100px;
+    font-weight: bold;
+    display: block;
+    background: linear-gradient(to right, #153a6a, rgb(114, 189, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+  
+/* styles.css or in your component's CSS file */
+.blue-text {
+    color: #00aaff;
+    font-size: 100px;
+}
+
+.black-text {
+    color: black;
+    font-size: 80px;
+}
+
+.main-text {
+    color: #00aaff;
+    font-size: 60px;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+ .nav-links.open {
+    display: none;
+ }
+
+  @media (max-width: 768px) {
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-left:-15%;
+        width: 200px; /* Set width for the form container */
+       
+        position: relative;
+      }
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(21, 58, 106, 0.9), rgba(114, 189, 255, 0.9));        
+        z-index: 999;
+      }
+      .hamburger-icon {
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .hamburger-icon span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: white;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      /* Animation for the 'open' state */
+      .hamburger-icon.open .top {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+      }
+      
+      .hamburger-icon.open .middle {
+        opacity: 0;
+      }
+      
+      .hamburger-icon.open .bottom {
+        transform: rotate(-45deg);
+        position: absolute;
+        bottom: 0;
+      }
+      
+      .nav-links a:hover {
+        color: #ff5733;
+      }
+   ul.navbar-links {
+    display: none;
+   }
+  
+     .nav-links.open a {
+        display: contents;
+    color: white !important;
+    background: none !important; /* Remove any gradient */
+    -webkit-background-clip: text;
+  
+    -webkit-text-fill-color: white !important; /* Ensure text stays white */
+   
+  }
+      
+  .nav-links.open{
+    right:35%;
+  }
+ 
+    video.background-logo {
+      position: absolute;
+      top: 0;
+      left: 40%;
+      width: 70%;
+      height: 70%;
+      z-index: -1;
+    }
+.TypeWriter span{
+font-size: 45px;
+}
+.TypeWriter p{
+    font-size:25px;
+}
+.TypeWriter{
+    top:-50%;
+}
+.free-consultation-btn{
+    top:20%;
+}
+.title h2 {
+    font-size: 38px;
+    margin-left:-65%;
+   
+}
+.about-text
+ h2{
+    font-size:38px;
+ }
+.Consultation{
+    top:10%;
+}
+  } 
+@media (min-width:767px) and (max-width:1025px){
+    ul.nav-links.open{
+        display: none;
+    }
+  
+        .TypeWriter{
+            top:-50%;
+        }
+        .free-consultation-btn{
+            top:30%;
+        }
+        .Consultation{
+            top:10%;
+        }
+        .background-logo{
+            margin-right:15%;
+        }
+        
+}
+@media (min-width:1025px) and (max-width:1470px){
+    ul.nav-links.open{
+        display: none;
+    }
+  
+        .TypeWriter{
+            top:-30%;
+        }
+        .free-consultation-btn{
+            top:30%;
+        }
+        .Consultation{
+            top:10%;
+        }
+        .background-logo{
+            margin-right:15%;
+        }
+}
+.content {
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  .content.blurred {
+    filter: blur(5px); /* Adjust the blur intensity as needed */
+    pointer-events: none; /* Optional: Disable interactions with blurred content */
+  }
+  
+/* Apply blur effect to the background content */
+.blur {
+    filter: blur(5px);
+    pointer-events: none; /* Prevent interaction with background */
+  }
+  
+  /* The modal itself should not be blurred */
+  .consultation-modal-overlay,
+  .consultation-modal html {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.647); /* Semi-transparent background */
+  backdrop-filter: blur(2px); /* Apply blur effect to the background */
+  -webkit-backdrop-filter: blur(2px); /* For Safari compatibility */
+
+  }
+  
+  .consultation-modal {
+   
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  button.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  button.close-modal:hover {
+    color: #007bff;
+  }
+  
+
+  .modal-container {
+    position: fixed;
+    top: 0;
+   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it's on top of other content */
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    left:20%;
+    width: 400px; /* Set width for the form container */
+   
+    position: relative;
+  }
+ 
+  /* clip loader */
+.clip-loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db; /* Blue color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  
+  /* Animation for spin */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  

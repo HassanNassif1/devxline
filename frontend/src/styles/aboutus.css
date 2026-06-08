@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+/* Slide-in and animation for intro section */
+.intro {
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  .intro-text {
+    animation: fadeIn 1s ease-in-out;
+    background: linear-gradient(to right, #153a6a, rgb(114, 189, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Define slide-in animation for logo */
+  .logo-img {
+    animation: slideInLogo 1s ease-in-out;
+  }
+  
+  /* Specific slide-in effect for service boxes */
+  .service-box {
+    animation: slideInUp 1s ease-in-out;
+  }
+  
+  /* Keyframes for slide-in effects */
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLogo {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+/* Navigation */
+ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+}
+nav ul li a:hover, nav ul li a.active {
+    color: #00aaff;
+}
+/* Intro Section */
+.intro {
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 20px;
+}
+
+/* Section Titles */
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(to right, #153a6a, rgb(114, 189, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+    color: #333;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background-color: #00aaff;
+    margin: 10px auto;
+}
+
+/* What We Do Section */
+.what-we-do {
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-box {
+    background-color: #ffffff;
+    color: #fff;
+    width: 250px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Adding shadow */
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-box .service-icon {
+    font-size: 50px;
+    display: block;
+    margin: 25px auto; /* Center the icon horizontally */
+    color: rgb(114, 189, 255);
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-align: center; /* Ensures the icon is centered */
+}
+
+.service-box:hover .service-icon {
+    transform: scale(1.3);  /* Increase the icon size on hover */
+    color: rgb(114, 189, 255);  /* Optional: Change color on hover */
+}
+.service-box i {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+     background: linear-gradient(to right, #153a6a, rgb(114, 189, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+/* Future Works Section */
+.future-works {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.future-works p {
+    font-size: 18px;
+    color: #555;
+}
+h1{
+    color: #333;
+} 
+p{
+  background: linear-gradient(to right, rgb(114, 189, 255), #153a6a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .intro h1 {
+        font-size: 35px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+    .nav-links.open {
+      display: flex;
+      width: 30%;
+      margin-top: -15%;
+      pointer-events: all; /* Enables clicks when the menu is open */
+      
+    }
+    
+   
+}
