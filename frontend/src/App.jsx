@@ -597,9 +597,7 @@ function MainApp() {
           </div>
         </section>
 
-        <section className="marquee-section">
-          <div className="marquee-outline">THINK BIG · BUILD SMART · GROW FASTER · </div>
-        </section>
+
 
         <section id="process" className="section process-section">
           <div className="section-label"><span>04</span> OUR PROCESS</div>

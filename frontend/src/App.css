@@ -931,9 +931,39 @@ button { border: 0; cursor: pointer; }
   box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
 }
 
-.marquee-section { padding: 45px 0; background: var(--lime); overflow: hidden; }
-.marquee-outline { white-space: nowrap; font-size: clamp(50px, 8vw, 120px); font-weight: 800; letter-spacing: -.08em; line-height: .8; animation: marquee 22s linear infinite; color: transparent; -webkit-text-stroke: 2px var(--ink); }
+.marquee-section {
+    padding: 45px 0;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+    overflow: hidden;
+}
+/* Base style - works for both modes */
+.marquee-outline {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    animation: marquee 3s linear infinite;
+    margin-left:20%;
+    /* Default color for dark mode */
+    color: rgba(255, 255, 255, 0.15);
+}
 
+/* Light mode override */
+[data-theme="light"] .marquee-outline {
+    color: #ffffff;
+}
+
+/* Optional: add a subtle glow in light mode */
+[data-theme="light"] .marquee-outline {
+    color: #ffffff;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 .process-section { background: var(--paper); }
 .process-header { align-items: end; margin-bottom: 85px; }
 .process-header p, .industries-grid > div > p { max-width: 460px; color: #74767d; line-height: 1.8; font-size: 14px; }
@@ -2638,4 +2668,99 @@ button { border: 0; cursor: pointer; }
     font-size: 9px !important;
     padding: 5px 12px !important;
   }
+}
+.terminal-section {
+  padding: 60px 0;
+  background: #0a0a0f;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.terminal-window {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #14141a;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+
+.terminal-header {
+  padding: 14px 20px;
+  background: #1a1a22;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27c93f; }
+
+.terminal-path {
+  margin-left: 12px;
+  color: rgba(255,255,255,0.3);
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-body {
+  padding: 30px;
+  font-family: 'Courier New', monospace;
+  color: #e4e4e4;
+}
+
+.terminal-line {
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+}
+
+.terminal-line:nth-child(1) { animation-delay: 0.2s; }
+.terminal-line:nth-child(2) { animation-delay: 0.6s; }
+.terminal-line:nth-child(3) { animation-delay: 1.0s; }
+.terminal-line:nth-child(4) { animation-delay: 1.4s; }
+.terminal-line:nth-child(5) { animation-delay: 1.8s; }
+
+.terminal-prompt {
+  color: #50fa7b;
+  margin-right: 12px;
+}
+
+.terminal-command {
+  color: #f1fa8c;
+}
+
+.terminal-output {
+  color: #8be9fd;
+  padding-left: 24px;
+}
+
+.typing .terminal-output {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(40) forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
