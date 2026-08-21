@@ -587,78 +587,78 @@ const BusinessTypeStatsCard = memo(({ businessData, isDark }) => {
 });
 
 // ============ RESPONSIVE GLOBAL PRESENCE ============
-const GlobalPresenceWrapper = memo(({ isDark }) => {
-  const textColor = isDark ? '#e0e7ff' : '#1a1a2e';
-  const mutedColor = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.4)';
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+// const GlobalPresenceWrapper = memo(({ isDark }) => {
+//   const textColor = isDark ? '#e0e7ff' : '#1a1a2e';
+//   const mutedColor = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.4)';
+//   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+//   useEffect(() => {
+//     const handleResize = () => setIsMobile(window.innerWidth < 768);
+//     window.addEventListener('resize', handleResize);
+//     return () => window.removeEventListener('resize', handleResize);
+//   }, []);
 
-  return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        alignItems: 'center', 
-        marginBottom: 'clamp(12px, 2vw, 16px)',
-        flexWrap: 'wrap',
-        gap: '8px'
-      }}>
-        <Text style={{ color: textColor, fontSize: 'clamp(12px, 1.4vw, 14px)', fontWeight: 600, letterSpacing: '1px' }}>
-          <span style={{ color: '#ff007f', marginRight: 8 }}>🌍</span> {isMobile ? 'GLOBAL' : 'GLOBAL PRESENCE'}
-        </Text>
-        <Badge 
-          count="Online"
-          style={{ 
-            background: 'linear-gradient(135deg, #00e5ff, #ff007f)',
-            fontSize: 'clamp(8px, 0.8vw, 10px)',
-            padding: '0 clamp(6px, 1vw, 12px)',
-            borderRadius: 12,
-            boxShadow: isDark ? '0 0 15px rgba(0,229,255,0.2)' : 'none'
-          }} 
-        />
-      </div>
+//   return (
+//     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+//       <div style={{ 
+//         display: 'flex', 
+//         justifyContent: 'space-between', 
+//         alignItems: 'center', 
+//         marginBottom: 'clamp(12px, 2vw, 16px)',
+//         flexWrap: 'wrap',
+//         gap: '8px'
+//       }}>
+//         <Text style={{ color: textColor, fontSize: 'clamp(12px, 1.4vw, 14px)', fontWeight: 600, letterSpacing: '1px' }}>
+//           <span style={{ color: '#ff007f', marginRight: 8 }}>🌍</span> {isMobile ? 'GLOBAL' : 'GLOBAL PRESENCE'}
+//         </Text>
+//         <Badge 
+//           count="Online"
+//           style={{ 
+//             background: 'linear-gradient(135deg, #00e5ff, #ff007f)',
+//             fontSize: 'clamp(8px, 0.8vw, 10px)',
+//             padding: '0 clamp(6px, 1vw, 12px)',
+//             borderRadius: 12,
+//             boxShadow: isDark ? '0 0 15px rgba(0,229,255,0.2)' : 'none'
+//           }} 
+//         />
+//       </div>
       
-      <div style={{ 
-        flex: 1, 
-        minHeight: 'clamp(140px, 25vh, 220px)',
-        position: 'relative',
-        borderRadius: 16,
-        overflow: 'hidden',
-        border: isDark ? '1px solid rgba(0,229,255,0.15)' : '1px solid rgba(59,130,246,0.1)',
-        background: isDark ? 'rgba(10, 8, 20, 0.4)' : 'rgba(240,240,255,0.5)'
-      }}>
-        <WorldMap />
-      </div>
+//       <div style={{ 
+//         flex: 1, 
+//         minHeight: 'clamp(140px, 25vh, 220px)',
+//         position: 'relative',
+//         borderRadius: 16,
+//         overflow: 'hidden',
+//         border: isDark ? '1px solid rgba(0,229,255,0.15)' : '1px solid rgba(59,130,246,0.1)',
+//         background: isDark ? 'rgba(10, 8, 20, 0.4)' : 'rgba(240,240,255,0.5)'
+//       }}>
+//         <WorldMap />
+//       </div>
 
-      <div style={{ 
-        marginTop: 'clamp(8px, 1.5vw, 12px)',
-        display: 'flex',
-        justifyContent: 'space-between',
-        padding: '0 4px',
-        flexWrap: 'wrap',
-        gap: '8px'
-      }}>
-        <div>
-          <Text style={{ color: mutedColor, fontSize: 'clamp(9px, 1vw, 11px)' }}>ACTIVE REGIONS</Text>
-          <div style={{ color: textColor, fontSize: 'clamp(14px, 2vw, 16px)', fontWeight: 700 }}>
-            <CountUp end={42} /> {!isMobile && 'Countries'}
-          </div>
-        </div>
-        <div style={{ textAlign: isMobile ? 'left' : 'right' }}>
-          <Text style={{ color: mutedColor, fontSize: 'clamp(9px, 1vw, 11px)' }}>LIVE USERS</Text>
-          <div style={{ color: '#00e5ff', fontSize: 'clamp(14px, 2vw, 16px)', fontWeight: 700, textShadow: isDark ? '0 0 10px rgba(0,229,255,0.2)' : 'none' }}>
-            <CountUp end={2.4} />k
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-});
+//       <div style={{ 
+//         marginTop: 'clamp(8px, 1.5vw, 12px)',
+//         display: 'flex',
+//         justifyContent: 'space-between',
+//         padding: '0 4px',
+//         flexWrap: 'wrap',
+//         gap: '8px'
+//       }}>
+//         <div>
+//           <Text style={{ color: mutedColor, fontSize: 'clamp(9px, 1vw, 11px)' }}>ACTIVE REGIONS</Text>
+//           <div style={{ color: textColor, fontSize: 'clamp(14px, 2vw, 16px)', fontWeight: 700 }}>
+//             <CountUp end={42} /> {!isMobile && 'Countries'}
+//           </div>
+//         </div>
+//         <div style={{ textAlign: isMobile ? 'left' : 'right' }}>
+//           <Text style={{ color: mutedColor, fontSize: 'clamp(9px, 1vw, 11px)' }}>LIVE USERS</Text>
+//           <div style={{ color: '#00e5ff', fontSize: 'clamp(14px, 2vw, 16px)', fontWeight: 700, textShadow: isDark ? '0 0 10px rgba(0,229,255,0.2)' : 'none' }}>
+//             <CountUp end={2.4} />k
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// });
 
 // ============ MAIN DASHBOARD COMPONENT ============
 const Dashboard = () => {
@@ -826,9 +826,9 @@ const Dashboard = () => {
             <CardWrapper id="service" isHovered={hoveredCard} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} isDark={isDark} colorIndex={2}>
               <ServiceDistributionChart serviceData={mockServiceData} isDark={isDark} />
             </CardWrapper>
-            <CardWrapper id="global" isHovered={hoveredCard} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} isDark={isDark} colorIndex={3}>
+            {/* <CardWrapper id="global" isHovered={hoveredCard} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} isDark={isDark} colorIndex={3}>
               <GlobalPresenceWrapper isDark={isDark} />
-            </CardWrapper>
+            </CardWrapper> */}
           </div>
         </div>
 

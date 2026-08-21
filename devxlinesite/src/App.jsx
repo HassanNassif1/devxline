@@ -8,21 +8,23 @@ import Navbar from "./components/Navbar";
 import devxlineLight from './img/devxlinelight.png';
 import devxlineDark from './img/devxlinedark.png';
 
-// Import project images
-import restaurantImg from "./img/restaurant.jpg";
-import healthcareImg from "./img/healthcare.jpg";
-import ecommerceImg from "./img/ecommerce.jpg";
-import bookingImg from "./img/booking.jpg";
-import realestateImg from "./img/realestate.jpg";
-import logisticsImg from "./img/logistics.jpg";
+// Import ScandiWeb images
+import scandiweb1 from "./img/scandiweb/1.png";
+
+// Import TbilisiDiscover images
+import tbilisi1 from "./img/tbilisidiscover/1.png";
+
+// Import DigitalConnects images
+import digital1 from "./img/digitalconnects/1.png";
+
+// Import Estishara images
+import estishara1 from "./img/estishara/1.png";
 
 // Import project page components
-import LuxuryRestaurant from "./services/LuxuryRestaurant";
-import HealthcareManagement from "./services/HealthcareManagement";
-import ECommerceGrowthSuite from "./services/ECommerceGrowthSuite";
-import AutomatedBookingSystem from "./services/AutomatedBookingSystem";
-import RealEstateDigitalPlatform from "./services/RealEstateDigitalPlatform";
-import LogisticsAutomationSuite from "./services/LogisticsAutomationSuite";
+import ScandiWebProject from "./services/ScandiWebProject";
+import TbilisiDiscoverProject from "./services/TbilisiDiscoverProject";
+import DigitalConnectsProject from "./services/DigitalConnectsProject";
+import EstisharaProject from "./services/EstisharaProject";
 
 const services = [
   {
@@ -81,157 +83,59 @@ const industries = [
   "Startups",
 ];
 
-// Projects Data with detailed information
+// Projects Data
 const projects = [
   {
     id: 1,
-    title: "Luxury Restaurant Website",
-    slug: "restaurant",
+    title: "ScandiWeb Platform",
+    slug: "scandiweb",
     category: "Web Development",
-    description: "Premium dining experience with online reservations, menu management, and interactive gallery.",
-    image: restaurantImg,
+    description: "A comprehensive e-commerce platform with AI-powered recommendations and real-time analytics.",
+    image: scandiweb1,
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
     serviceId: 0,
     serviceName: "Web Experiences",
-    icon: "🍽️",
-    gradient: "linear-gradient(135deg, #f59e0b, #f97316)",
-    challenge: "The client needed a sophisticated online presence that reflected their premium dining experience, with seamless reservation management and an interactive menu that would engage visitors.",
-    solution: "We built a custom React-based platform with real-time table availability, a dynamic menu system with high-quality imagery, and integrated Stripe for secure deposits. The design focused on warmth and elegance.",
-    results: "Online reservations increased by 340%, table turnover improved by 28%, and the website received a 4.9/5 user satisfaction rating.",
-    features: [
-      "Real-time table availability",
-      "Interactive menu with dietary filters",
-      "Secure online booking with deposits",
-      "Customer review integration",
-      "Mobile-first responsive design",
-      "Analytics dashboard for management"
-    ],
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API", "Cloudinary", "Google Maps API", "Socket.io"],
+    icon: "🛒",
+    gradient: "linear-gradient(135deg, #6366f1, #8b5cf6)",
   },
   {
     id: 2,
-    title: "Healthcare Management Platform",
-    slug: "healthcare",
-    category: "Custom Software",
-    description: "Complete patient management system with appointment scheduling, medical records, and billing.",
-    image: healthcareImg,
-    tags: ["Next.js", "PostgreSQL", "AWS", "Twilio"],
-    serviceId: 1,
-    serviceName: "Business Systems",
-    icon: "🏥",
-    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
-    challenge: "A growing medical practice needed a unified platform to manage patient records, appointments, billing, and communication across multiple locations.",
-    solution: "We developed a HIPAA-compliant Next.js platform with real-time appointment scheduling, electronic medical records (EMR), automated billing, and Twilio integration for SMS notifications.",
-    results: "Patient wait times reduced by 52%, administrative costs decreased by 35%, and staff satisfaction increased by 78%.",
-    features: [
-      "HIPAA-compliant data storage",
-      "Real-time appointment scheduling",
-      "Electronic medical records (EMR)",
-      "Automated billing and invoicing",
-      "Multi-location management",
-      "Patient portal with secure messaging"
-    ],
-    technologies: ["Next.js", "PostgreSQL", "AWS", "Twilio", "Redis", "Docker", "Kubernetes", "WebRTC"],
+    title: "Tbilisi Discover",
+    slug: "tbilisidiscover",
+    category: "Web Development",
+    description: "A comprehensive travel guide platform showcasing the best of Tbilisi.",
+    image: tbilisi1,
+    tags: ["React", "Node.js", "MongoDB", "Mapbox"],
+    serviceId: 0,
+    serviceName: "Web Experiences",
+    icon: "🗺️",
+    gradient: "linear-gradient(135deg, #10b981, #06b6d4)",
   },
   {
     id: 3,
-    title: "E-Commerce Growth Suite",
-    slug: "ecommerce",
-    category: "Digital Growth",
-    description: "AI-powered analytics and optimization platform that increased conversions by 156%.",
-    image: ecommerceImg,
-    tags: ["Python", "TensorFlow", "React", "Docker"],
-    serviceId: 2,
-    serviceName: "Digital Growth",
-    icon: "📈",
-    gradient: "linear-gradient(135deg, #10b981, #06b6d4)",
-    challenge: "An e-commerce retailer needed to understand why visitors were abandoning carts and how to optimize their conversion funnel.",
-    solution: "We built an AI-driven analytics platform using TensorFlow that analyzes user behavior in real-time, provides personalized product recommendations, and automatically adjusts pricing strategies.",
-    results: "Conversion rate increased by 156%, average order value grew by 42%, and cart abandonment decreased by 67%.",
-    features: [
-      "Real-time behavior analytics",
-      "AI-powered product recommendations",
-      "Dynamic pricing optimization",
-      "Automated A/B testing",
-      "Heatmap and session recording",
-      "Predictive inventory management"
-    ],
-    technologies: ["Python", "TensorFlow", "React", "Docker", "Kafka", "Elasticsearch", "Redis", "GraphQL"],
+    title: "Digital Connects",
+    slug: "digitalconnects",
+    category: "Custom Software",
+    description: "A comprehensive digital solutions platform with real-time analytics, network management, and integration tools.",
+    image: digital1,
+    tags: ["React", "Node.js", "PostgreSQL", "AWS"],
+    serviceId: 1,
+    serviceName: "Business Systems",
+    icon: "🔗",
+    gradient: "linear-gradient(135deg, #f59e0b, #f97316)",
   },
   {
     id: 4,
-    title: "Automated Booking System",
-    slug: "booking",
-    category: "Booking & Automation",
-    description: "Smart scheduling platform with real-time availability, automated reminders, and payment processing.",
-    image: bookingImg,
-    tags: ["Vue.js", "Express", "Redis", "WebSocket"],
-    serviceId: 3,
-    serviceName: "Booking & Automation",
-    icon: "📅",
-    gradient: "linear-gradient(135deg, #ec4899, #f43f5e)",
-    challenge: "A service-based business was struggling with manual booking management, double-bookings, and missed appointments.",
-    solution: "We created a comprehensive booking platform with real-time availability sync, automated email/SMS reminders, integrated payment processing, and a staff management dashboard.",
-    results: "No-shows decreased by 85%, booking capacity increased by 120%, and customer satisfaction reached 4.8/5.",
-    features: [
-      "Real-time availability synchronization",
-      "Automated email and SMS reminders",
-      "Secure payment processing",
-      "Staff scheduling and management",
-      "Customer history and preferences",
-      "Reporting and analytics dashboard"
-    ],
-    technologies: ["Vue.js", "Express", "Redis", "WebSocket", "Stripe", "SendGrid", "MongoDB", "JWT"],
-  },
-  {
-    id: 5,
-    title: "Real Estate Digital Platform",
-    slug: "realestate",
+    title: "Estishara · visa",
+    slug: "estishara",
     category: "Web Development",
-    description: "Immersive property showcase with 3D tours, AI recommendations, and smart search.",
-    image: realestateImg,
-    tags: ["Three.js", "GraphQL", "Elasticsearch", "Firebase"],
+    description: "A comprehensive visa consultation and appointment management platform.",
+    image: estishara1,
+    tags: ["React", "Node.js", "MongoDB", "JWT"],
     serviceId: 0,
     serviceName: "Web Experiences",
-    icon: "🏠",
-    gradient: "linear-gradient(135deg, #8b5cf6, #6366f1)",
-    challenge: "A real estate agency needed a cutting-edge platform to showcase properties with immersive 3D tours and intelligent search capabilities.",
-    solution: "We developed a WebGL-powered platform with Three.js for 3D property tours, AI-driven property recommendations, and Elasticsearch for fast, accurate search with filters.",
-    results: "Property views increased by 320%, average time on site grew to 8.5 minutes, and qualified leads increased by 156%.",
-    features: [
-      "Immersive 3D property tours",
-      "AI-powered property recommendations",
-      "Advanced search with filters",
-      "Virtual staging and visualization",
-      "Interactive neighborhood maps",
-      "Agent communication portal"
-    ],
-    technologies: ["Three.js", "GraphQL", "Elasticsearch", "Firebase", "React", "Node.js", "WebGL", "Mapbox"],
-  },
-  {
-    id: 6,
-    title: "Logistics Automation Suite",
-    slug: "logistics",
-    category: "Business Systems",
-    description: "End-to-end supply chain management with real-time tracking, route optimization, and analytics.",
-    image: logisticsImg,
-    tags: ["Go", "Kafka", "PostgreSQL", "React Native"],
-    serviceId: 1,
-    serviceName: "Business Systems",
-    icon: "🚚",
-    gradient: "linear-gradient(135deg, #06b6d4, #10b981)",
-    challenge: "A logistics company needed to modernize their operations with real-time tracking, route optimization, and delivery analytics.",
-    solution: "We built a microservices architecture with Go for high-performance processing, Kafka for real-time data streaming, and a React Native mobile app for drivers.",
-    results: "Delivery times reduced by 32%, operational costs decreased by 28%, and customer satisfaction reached 4.7/5.",
-    features: [
-      "Real-time GPS tracking",
-      "Dynamic route optimization",
-      "Delivery analytics dashboard",
-      "Mobile driver application",
-      "Automated notifications",
-      "Fleet management system"
-    ],
-    technologies: ["Go", "Kafka", "PostgreSQL", "React Native", "Docker", "Kubernetes", "GRPC", "Redis"],
+    icon: "🛂",
+    gradient: "linear-gradient(135deg, #4f46e5, #7c3aed)",
   },
 ];
 
@@ -537,12 +441,12 @@ function MainApp() {
           <div className="section-label"><span>03</span> OUR WORK</div>
           <div className="projects-header">
             <div>
-       <h2 className="section-title">Solutions <span>projects</span><br />tailored for your business.</h2>
+              <h2 className="section-title">Featured <span>Projects</span></h2>
               <p className="projects-subtitle">Click any project to view detailed case study.</p>
             </div>
             <div className="projects-badge">
-              <span>6+ Projects</span>
-              <span>4 Services</span>
+              <span>{projects.length} Projects</span>
+              <span>Web & Software</span>
             </div>
           </div>
 
@@ -564,7 +468,7 @@ function MainApp() {
                   <div className="project-image-overlay">
                     <div className="project-overlay-content">
                       <span className="project-icon">{project.icon}</span>
-                  <span className="project-view-btn">Preview Solution →</span>
+                      <span className="project-view-btn">View Case Study →</span>
                       <span className="project-service-name">{project.serviceName}</span>
                     </div>
                   </div>
@@ -596,8 +500,6 @@ function MainApp() {
             </button>
           </div>
         </section>
-
-
 
         <section id="process" className="section process-section">
           <div className="section-label"><span>04</span> OUR PROCESS</div>
@@ -731,12 +633,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainApp />} />
-        <Route path="/project/restaurant" element={<LuxuryRestaurant />} />
-        <Route path="/project/healthcare" element={<HealthcareManagement />} />
-        <Route path="/project/ecommerce" element={<ECommerceGrowthSuite />} />
-        <Route path="/project/booking" element={<AutomatedBookingSystem />} />
-        <Route path="/project/realestate" element={<RealEstateDigitalPlatform />} />
-        <Route path="/project/logistics" element={<LogisticsAutomationSuite />} />
+        <Route path="/project/scandiweb" element={<ScandiWebProject />} />
+        <Route path="/project/tbilisidiscover" element={<TbilisiDiscoverProject />} />
+        <Route path="/project/digitalconnects" element={<DigitalConnectsProject />} />
+        <Route path="/project/estishara" element={<EstisharaProject />} />
       </Routes>
     </Router>
   );

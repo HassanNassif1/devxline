@@ -4,12 +4,10 @@ import devxlineDark from "../img/devxlinedark.png";
 import devxlineLight from "../img/devxlinelight.png";
 
 // Import project images
-import restaurantImg from "../img/restaurant.jpg";
-import healthcareImg from "../img/healthcare.jpg";
-import ecommerceImg from "../img/ecommerce.jpg";
-import bookingImg from "../img/booking.jpg";
-import realestateImg from "../img/realestate.jpg";
-import logisticsImg from "../img/logistics.jpg";
+import scandiwebImg from "../img/scandiweb/1.png";
+import tbilisidiscoverImg from "../img/tbilisidiscover/1.png";
+import digitalconnectsImg from "../img/digitalconnects/1.png";
+import estisharaImg from "../img/estishara/1.png";
 
 const Navbar = ({ darkMode, toggleDarkMode, scrollTo, activeSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,58 +21,40 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollTo, activeSection }) => {
 
   const projects = [
     { 
-      slug: "restaurant", 
-      name: "Luxury Restaurant", 
-      icon: "🍽️",
-      image: restaurantImg,
+      slug: "scandiweb", 
+      name: "ScandiWeb Platform", 
+      icon: "🛒",
+      image: scandiwebImg,
       category: "Web Development",
-      color: "#f59e0b",
-      gradient: "linear-gradient(135deg, #f59e0b, #f97316)"
+      color: "#6366f1",
+      gradient: "linear-gradient(135deg, #6366f1, #8b5cf6)"
     },
     { 
-      slug: "healthcare", 
-      name: "Healthcare Management", 
-      icon: "🏥",
-      image: healthcareImg,
-      category: "Custom Software",
-      color: "#3b82f6",
-      gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
-    },
-    { 
-      slug: "ecommerce", 
-      name: "E-Commerce Growth Suite", 
-      icon: "📈",
-      image: ecommerceImg,
-      category: "Digital Growth",
+      slug: "tbilisidiscover", 
+      name: "Tbilisi Discover", 
+      icon: "🗺️",
+      image: tbilisidiscoverImg,
+      category: "Web Development",
       color: "#10b981",
       gradient: "linear-gradient(135deg, #10b981, #06b6d4)"
     },
     { 
-      slug: "booking", 
-      name: "Automated Booking System", 
-      icon: "📅",
-      image: bookingImg,
-      category: "Booking & Automation",
-      color: "#ec4899",
-      gradient: "linear-gradient(135deg, #ec4899, #f43f5e)"
+      slug: "digitalconnects", 
+      name: "Digital Connects", 
+      icon: "🔗",
+      image: digitalconnectsImg,
+      category: "Custom Software",
+      color: "#f59e0b",
+      gradient: "linear-gradient(135deg, #f59e0b, #f97316)"
     },
     { 
-      slug: "realestate", 
-      name: "Real Estate Platform", 
-      icon: "🏠",
-      image: realestateImg,
+      slug: "estishara", 
+      name: "Estishara · visa", 
+      icon: "🛂",
+      image: estisharaImg,
       category: "Web Development",
-      color: "#8b5cf6",
-      gradient: "linear-gradient(135deg, #8b5cf6, #6366f1)"
-    },
-    { 
-      slug: "logistics", 
-      name: "Logistics Automation Suite", 
-      icon: "🚚",
-      image: logisticsImg,
-      category: "Business Systems",
-      color: "#06b6d4",
-      gradient: "linear-gradient(135deg, #06b6d4, #10b981)"
+      color: "#4f46e5",
+      gradient: "linear-gradient(135deg, #4f46e5, #7c3aed)"
     },
   ];
 
@@ -87,7 +67,6 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollTo, activeSection }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 800 && menuOpen) {
@@ -99,7 +78,6 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollTo, activeSection }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [menuOpen]);
 
-  // Clean up timeout on unmount
   useEffect(() => {
     return () => {
       if (hoverTimeout) {
@@ -158,7 +136,6 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollTo, activeSection }) => {
     setMobileDropdownOpen(false);
   };
 
-  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuOpen && !event.target.closest('.navbar')) {
@@ -205,7 +182,6 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollTo, activeSection }) => {
               {getIndicator("services")}
             </button>
             
-            {/* Projects Dropdown - Desktop hover, Mobile click */}
             <div 
               className="projects-dropdown-wrapper"
               ref={dropdownRef}
@@ -259,7 +235,17 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollTo, activeSection }) => {
                       </Link>
                     ))}
                   </div>
-               
+                  <div className="dropdown-footer">
+                    <Link
+                      to="/#projects"
+                      className="dropdown-view-all-btn"
+                      onClick={handleProjectClick}
+                    >
+                      <span>📂</span>
+                      <span>View All Projects</span>
+                      <span>→</span>
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -291,7 +277,6 @@ const Navbar = ({ darkMode, toggleDarkMode, scrollTo, activeSection }) => {
               Services
             </Link>
             
-            {/* Projects Dropdown for non-home pages */}
             <div 
               className="projects-dropdown-wrapper"
               ref={dropdownRef}
